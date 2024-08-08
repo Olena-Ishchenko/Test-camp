@@ -1,0 +1,41 @@
+.cardContainer {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 358px;
+  display: flex;
+  gap: 24px;
+  background: #fff;
+}
+
+.cardPhoto {
+  border-radius: 10px;
+  object-fit: cover;
+  height: 310px;
+}
+
+.cardInfoContainer {
+  width: 526px;
+  height: 310px;
+}
+
+.cardNameContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardName {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #101828;
+}
+
+.cardDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  height: 24px;
+  overflow: hidden;
+}

@@ -1,5 +1,9 @@
 const FilterSection = () => {
-  return <div></div>;
+  return (
+    <div>
+      <p>Filters</p>
+    </div>
+  );
 };
 
 export default FilterSection;
