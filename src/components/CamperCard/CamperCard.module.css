@@ -3,7 +3,7 @@
   border-radius: 20px;
   padding: 24px;
   width: 888px;
-  height: 358px;
+  /* height: 358px; */
   display: flex;
   gap: 24px;
   background: #fff;
@@ -23,6 +23,7 @@
 .cardNameContainer {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .cardName {
@@ -32,10 +33,85 @@
   color: #101828;
 }
 
+.cardPriceContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.cardBtnFavorite {
+  border: none;
+  background-color: transparent;
+  fill: transparent;
+  stroke: #101828;
+}
+
+.cardRatingContainer {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cardIconStar {
+  fill: #ffc531;
+}
+
+.cardRatingText {
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #101828;
+}
+
+.cardIconLocation {
+  fill: transparent;
+  stroke: #101828;
+}
+
+.cardLocationText {
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration-skip-ink: none;
+  color: #101828;
+}
+
 .cardDescription {
   font-size: 16px;
   line-height: 1.5;
   color: #475467;
   height: 24px;
   overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.cardDetailsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.cardDetailsItem {
+  border-radius: 100px;
+  padding: 12px 18px;
+  /* width: 126px; */
+  /* height: 44px; */
+  background: #f2f4f7;
+  mix-blend-mode: multiply;
+  display: flex;
+  gap: 8px;
+}
+
+.cardBtnShowMore {
+  border-radius: 200px;
+  border: none;
+  padding: 16px 40px;
+  width: 166px;
+  /* height: 56px; */
+  background: #e44848;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
 }

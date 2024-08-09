@@ -13,64 +13,77 @@ const CamperCard = ({ camper }) => {
       <div className={css.cardInfoContainer}>
         <div className={css.cardNameContainer}>
           <h2 className={css.cardName}>{camper.name}</h2>
-          <div>
+          <div className={css.cardPriceContainer}>
             <h2 className={css.cardName}>€{camper.price}</h2>
-            <button onClick={() => console.log('add')}>
+            <button
+              className={css.cardBtnFavorite}
+              onClick={() => console.log('add')}
+            >
               <svg width={24} height={24}>
-                <use href={`${icons}#icon-Heart`}></use>
+                <use href={`${icons}#icon-heart`}></use>
               </svg>
             </button>
           </div>
         </div>
-        <div>
-          <p>
+        <div className={css.cardRatingContainer}>
+          <p className={css.cardRatingText}>
+            <svg className={css.cardIconStar} width={16} height={16}>
+              <use href={`${icons}#icon-star`}></use>
+            </svg>
             {camper.rating}({camper.reviews.length} Reviews)
           </p>
-          <svg width={24} height={24}>
-            <use href={`${icons}#icon-Location`}></use>
-          </svg>
-          {camper.location}
+
+          <p className={css.cardLocationText}>
+            <svg width={16} height={16}>
+              <use href={`${icons}#icon-location`}></use>
+            </svg>{' '}
+            {camper.location}
+          </p>
         </div>
         <p className={css.cardDescription}>{camper.description}</p>
-        <ul>
-          <li>
+        <ul className={css.cardDetailsList}>
+          <li className={css.cardDetailsItem}>
             <svg width={20} height={20}>
-              <use href={`${icons}#icon-Users`}></use>
+              <use href={`${icons}#icon-users`}></use>
             </svg>
             <p>{camper.adults} adults</p>
           </li>
-          <li>
+          <li className={css.cardDetailsItem}>
             <svg width={20} height={20}>
-              <use href={`${icons}#icon-Automatic`}></use>
+              <use href={`${icons}#icon-automatic`}></use>
             </svg>
             <p>Automatic</p>
           </li>
-          <li>
+          <li className={css.cardDetailsItem}>
             <svg width={20} height={20}>
-              <use href={`${icons}#icon-Petrol`}></use>
+              <use href={`${icons}#icon-petrol`}></use>
             </svg>
             <p>Petrol</p>
           </li>
-          <li>
+          <li className={css.cardDetailsItem}>
             <svg width={20} height={20}>
-              <use href={`${icons}#icon-Kitchen`}></use>
+              <use href={`${icons}#icon-kitchen`}></use>
             </svg>
             <p>Kitchen</p>
           </li>
-          <li>
+          <li className={css.cardDetailsItem}>
             <svg width={20} height={20}>
-              <use href={`${icons}#icon-Beds`}></use>
+              <use href={`${icons}#icon-beds`}></use>
             </svg>
             <p>{camper.details.beds} beds</p>
           </li>
-          <li>
+          <li className={css.cardDetailsItem}>
             <svg width={20} height={20}>
               <use href={`${icons}#icon-AC`}></use>
             </svg>
             <p>AC</p>
           </li>
         </ul>
-        <button type="submit" onClick={() => console.log('show')}>
+        <button
+          className={css.cardBtnShowMore}
+          type="submit"
+          onClick={() => console.log('show')}
+        >
           Show more
         </button>
       </div>
