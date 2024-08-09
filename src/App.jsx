@@ -3,7 +3,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import AppBar from './components/AppBar/AppBar';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
-const CatalogPage = lazy(() => import('./pages/CatalogPage'));
+const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
 const FavoritePage = lazy(() => import('./pages/FavoritePage'));
 
 function App() {

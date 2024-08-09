@@ -16,6 +16,8 @@ const campersSlice = createSlice({
     items: [],
     loading: false,
     error: null,
+    page: 1,
+    totalPage: false,
   },
   extraReducers: builder => {
     builder
@@ -23,7 +25,9 @@ const campersSlice = createSlice({
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
-        state.items = action.payload;
+        state.items = state.items.concat(action.payload);
+        state.page = state.page + 1;
+        state.totalPage = action.payload.length < 4;
       })
       .addCase(fetchCampers.rejected, handleRejected);
   },
