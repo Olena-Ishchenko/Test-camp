@@ -45,6 +45,13 @@
   stroke: #101828;
 }
 
+.cardBtnFavoriteSelected {
+  border: none;
+  background-color: transparent;
+  fill: #e44848;
+  stroke: #e44848;
+}
+
 .cardRatingContainer {
   display: flex;
   gap: 16px;

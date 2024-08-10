@@ -1,0 +1,89 @@
+.modalContainer {
+  border-radius: 20px;
+  padding: 40px;
+  width: 982px;
+  /* height: 720px; */
+  background: #fff;
+}
+
+.modalTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.modalTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #101828;
+}
+
+.modalCloseBtn {
+  background-color: transparent;
+  border: none;
+}
+
+.modalCloseIcon {
+  stroke: #101828;
+}
+
+.modalRatingContainer {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.modalIconStar {
+  fill: #ffc531;
+}
+
+.modalRatingText {
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #101828;
+}
+
+.modalIconLocation {
+  fill: transparent;
+  stroke: #101828;
+}
+
+.modalLocationText {
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration-skip-ink: none;
+  color: #101828;
+}
+
+.photoList {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.photoItem {
+  border-radius: 10px;
+  height: 310px;
+  object-fit: cover;
+}
+
+.modalDescription {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+  margin-bottom: 44px;
+}
+
+.modalBtn {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  border: none;
+  background-color: transparent;
+  margin-right: 40px;
+}

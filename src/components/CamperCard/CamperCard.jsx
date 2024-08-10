@@ -1,7 +1,12 @@
 import icons from '../../assets/icons.svg';
 import css from './CamperCard.module.css';
 
-const CamperCard = ({ camper }) => {
+const CamperCard = ({
+  camper,
+  handleFavoriteBtn,
+  favoriteSelected,
+  openModal,
+}) => {
   return (
     <div className={css.cardContainer}>
       <img
@@ -16,8 +21,12 @@ const CamperCard = ({ camper }) => {
           <div className={css.cardPriceContainer}>
             <h2 className={css.cardName}>€{camper.price}</h2>
             <button
-              className={css.cardBtnFavorite}
-              onClick={() => console.log('add')}
+              className={`${
+                favoriteSelected
+                  ? css.cardBtnFavoriteSelected
+                  : css.cardBtnFavorite
+              }`}
+              onClick={() => handleFavoriteBtn(camper._id)}
             >
               <svg width={24} height={24}>
                 <use href={`${icons}#icon-heart`}></use>
@@ -82,7 +91,7 @@ const CamperCard = ({ camper }) => {
         <button
           className={css.cardBtnShowMore}
           type="submit"
-          onClick={() => console.log('show')}
+          onClick={() => openModal(camper._id)}
         >
           Show more
         </button>
