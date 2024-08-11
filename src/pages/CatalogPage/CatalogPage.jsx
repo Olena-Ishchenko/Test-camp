@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { selectError, selectIsLoading } from '../redux/campers/selectors';
 import { fetchCampers } from '../../redux/campers/operations';
 import FilterSection from '../../components/FilterSection/FilterSection';
 import CamperList from '../../components/CamperList/CamperList';
-// import CamperCard from '../components/CamperCard/CamperCard';
 import {
   selectCampers,
   selectItemById,
@@ -18,8 +16,6 @@ import { setItemById } from '../../redux/campers/slice';
 
 export default function CatalogPage() {
   const dispatch = useDispatch();
-  //   const isLoading = useSelector(selectIsLoading);
-  //   const error = useSelector(selectError);
   const data = useSelector(selectCampers);
   const totalPage = useSelector(selectTotalPage);
   const itemById = useSelector(selectItemById);
@@ -50,7 +46,7 @@ export default function CatalogPage() {
   }
 
   return (
-    <>
+    <div className={css.catalogPageContainer}>
       <FilterSection />
       <CamperList
         data={data}
@@ -78,6 +74,6 @@ export default function CatalogPage() {
           reviews={data.find(camper => camper._id === itemById)}
         />
       )}
-    </>
+    </div>
   );
 }

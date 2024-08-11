@@ -56,7 +56,7 @@ const CamperModal = ({
           {camper.location}
         </p>
       </div>
-      <h2 className={css.modalTitle}>€{camper.price}</h2>
+      <h2 className={css.modalTitle}>€{camper.price.toFixed(2)}</h2>
       {camper.gallery && (
         <ul className={css.photoList}>
           {camper.gallery.map((photo, id) => (

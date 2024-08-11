@@ -2,9 +2,9 @@ import { lazy, Suspense } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import AppBar from './components/AppBar/AppBar';
 
-const HomePage = lazy(() => import('./pages/HomePage'));
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
-const FavoritePage = lazy(() => import('./pages/FavoritePage'));
+const FavoritePage = lazy(() => import('./pages/FavoritePage/FavoritePage'));
 
 function App() {
   return (

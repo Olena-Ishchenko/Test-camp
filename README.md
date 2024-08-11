@@ -1,8 +1,8 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An application for a company that provides camper van rental services in
+Ukraine. The application consists of 3 pages. You can view the catalog, add the
+campers you liked to your favorites, view detailed information and use the form
+for quick booking.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Used react-hook-form, yup, react-modal, axios, redux, redux-persist.

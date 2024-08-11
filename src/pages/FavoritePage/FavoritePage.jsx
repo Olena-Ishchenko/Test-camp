@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
-import CamperList from '../components/CamperList/CamperList';
-import { selectFavorites } from '../redux/favorites/selectors';
-import { deleteFavorite } from '../redux/favorites/slice';
+import CamperList from '../../components/CamperList/CamperList';
+import { selectFavorites } from '../../redux/favorites/selectors';
+import { deleteFavorite } from '../../redux/favorites/slice';
+import css from './FavoritePage.module.css';
 
 export default function FavoritePage() {
   const dispatch = useDispatch();
@@ -13,12 +14,12 @@ export default function FavoritePage() {
   }
 
   return (
-    <>
+    <div className={css.favoritePageContainer}>
       <CamperList
         data={favorites}
         handleFavoriteBtn={handleFavoriteBtn}
         favorites={favoritesCamperId}
       />
-    </>
+    </div>
   );
 }

@@ -8,9 +8,7 @@
 
 .featureItem {
   border-radius: 100px;
-  padding: 12px 18px;
-  /* width: 126px; */
-  /* height: 44px; */
+  padding: 10px 16px;
   background: #f2f4f7;
   mix-blend-mode: multiply;
   display: flex;

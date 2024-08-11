@@ -59,6 +59,7 @@ const OrderForm = () => {
             {...register('bookingdate', { required: true })}
             placeholder="Booking date"
           />
+
           {errors.bookingdate?.message && (
             <p className={css.errorMessage}>{errors.bookingdate?.message}</p>
           )}

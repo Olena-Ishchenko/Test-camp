@@ -1,3 +1,9 @@
+.catalogPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .loadMoreBtn {
   border: 1px solid rgba(71, 84, 103, 0.2);
   border-radius: 200px;
@@ -6,6 +12,10 @@
   height: 56px;
   display: block;
   margin: 0 auto;
+}
+
+.loadMoreBtn:hover {
+  border: 1px solid #e44848;
 }
 
 .modal {

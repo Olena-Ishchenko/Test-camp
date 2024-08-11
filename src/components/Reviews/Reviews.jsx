@@ -13,9 +13,73 @@ const Reviews = ({ reviews }) => {
               </div>
               <div>
                 <h4 className={css.reviewerName}>{review.reviewer_name}</h4>
-                <svg className={css.iconStar} width={16} height={16}>
-                  <use href={`${icons}#icon-star`}></use>
-                </svg>
+                <ul className={css.starIconList}>
+                  <li>
+                    <svg
+                      className={
+                        review.reviewer_rating >= 1
+                          ? `${css.iconStarRating}`
+                          : `${css.iconStar}`
+                      }
+                      width={16}
+                      height={16}
+                    >
+                      <use href={`${icons}#icon-star`}></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      className={
+                        review.reviewer_rating >= 1.5
+                          ? `${css.iconStarRating}`
+                          : `${css.iconStar}`
+                      }
+                      width={16}
+                      height={16}
+                    >
+                      <use href={`${icons}#icon-star`}></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      className={
+                        review.reviewer_rating >= 2.5
+                          ? `${css.iconStarRating}`
+                          : `${css.iconStar}`
+                      }
+                      width={16}
+                      height={16}
+                    >
+                      <use href={`${icons}#icon-star`}></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      className={
+                        review.reviewer_rating >= 3.5
+                          ? `${css.iconStarRating}`
+                          : `${css.iconStar}`
+                      }
+                      width={16}
+                      height={16}
+                    >
+                      <use href={`${icons}#icon-star`}></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      className={
+                        review.reviewer_rating >= 4.5
+                          ? `${css.iconStarRating}`
+                          : `${css.iconStar}`
+                      }
+                      width={16}
+                      height={16}
+                    >
+                      <use href={`${icons}#icon-star`}></use>
+                    </svg>
+                  </li>
+                </ul>
               </div>
             </div>
             <p className={css.reviewText}>{review.comment}</p>

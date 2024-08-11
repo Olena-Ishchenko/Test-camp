@@ -14,12 +14,13 @@ const CamperCard = ({
         src={camper.gallery[0]}
         alt="camper photo"
         width="290"
+        loading="lazy"
       />
       <div className={css.cardInfoContainer}>
         <div className={css.cardNameContainer}>
           <h2 className={css.cardName}>{camper.name}</h2>
           <div className={css.cardPriceContainer}>
-            <h2 className={css.cardName}>€{camper.price}</h2>
+            <h2 className={css.cardName}>€{camper.price.toFixed(2)}</h2>
             <button
               className={`${
                 favoriteSelected
@@ -52,38 +53,38 @@ const CamperCard = ({
         <p className={css.cardDescription}>{camper.description}</p>
         <ul className={css.cardDetailsList}>
           <li className={css.cardDetailsItem}>
-            <svg width={20} height={20}>
+            <svg className={css.featureIcon} width={20} height={20}>
               <use href={`${icons}#icon-users`}></use>
             </svg>
             <p>{camper.adults} adults</p>
           </li>
           <li className={css.cardDetailsItem}>
-            <svg width={20} height={20}>
+            <svg className={css.featureIcon} width={20} height={20}>
               <use href={`${icons}#icon-automatic`}></use>
             </svg>
-            <p>Automatic</p>
+            <p>{camper.transmission}</p>
           </li>
           <li className={css.cardDetailsItem}>
-            <svg width={20} height={20}>
+            <svg className={css.featureIcon} width={20} height={20}>
               <use href={`${icons}#icon-petrol`}></use>
             </svg>
-            <p>Petrol</p>
+            <p>{camper.engine}</p>
           </li>
           <li className={css.cardDetailsItem}>
-            <svg width={20} height={20}>
+            <svg className={css.featureIcon} width={20} height={20}>
               <use href={`${icons}#icon-kitchen`}></use>
             </svg>
             <p>Kitchen</p>
           </li>
           <li className={css.cardDetailsItem}>
-            <svg width={20} height={20}>
+            <svg className={css.featureIcon} width={20} height={20}>
               <use href={`${icons}#icon-beds`}></use>
             </svg>
             <p>{camper.details.beds} beds</p>
           </li>
           <li className={css.cardDetailsItem}>
-            <svg width={20} height={20}>
-              <use href={`${icons}#icon-AC`}></use>
+            <svg className={css.featureIcon} width={20} height={20}>
+              <use href={`${icons}#icon-airConditioner`}></use>
             </svg>
             <p>AC</p>
           </li>

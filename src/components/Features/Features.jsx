@@ -95,7 +95,7 @@ function array(camper) {
 }
 
 const Features = ({ camperItem }) => {
-  const newArray = array(camperItem); // {name, quantity} camper[feature]
+  const newArray = array(camperItem);
   return (
     <div>
       <ul className={css.featuresList}>
