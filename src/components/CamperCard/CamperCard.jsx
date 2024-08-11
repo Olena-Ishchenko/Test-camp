@@ -44,7 +44,7 @@ const CamperCard = ({
           </p>
 
           <p className={css.cardLocationText}>
-            <svg width={16} height={16}>
+            <svg className={css.cardIconLocation} width={16} height={16}>
               <use href={`${icons}#icon-location`}></use>
             </svg>{' '}
             {camper.location}
