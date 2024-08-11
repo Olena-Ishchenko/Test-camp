@@ -67,11 +67,17 @@ export default function CatalogPage() {
           Load more
         </button>
       )}
-      <CamperModal
-        camper={data.find(camper => camper._id === itemById)}
-        modalIsOpen={openModal}
-        onChange={handleModal}
-      />
+      {itemById && (
+        <CamperModal
+          className={css.modal}
+          camper={data.find(camper => camper._id === itemById)}
+          modalIsOpen={openModal}
+          onChange={handleModal}
+          camperItem={data.find(camper => camper._id === itemById)}
+          details={data.find(camper => camper._id === itemById)}
+          reviews={data.find(camper => camper._id === itemById)}
+        />
+      )}
     </>
   );
 }

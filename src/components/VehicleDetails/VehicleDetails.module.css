@@ -1,0 +1,27 @@
+.detailsContainer {
+  width: 430px;
+}
+
+.detailsTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  margin-bottom: 24px;
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.detailsItem {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33333;
+  text-align: center;
+  color: #101828;
+  display: flex;
+  justify-content: space-between;
+}

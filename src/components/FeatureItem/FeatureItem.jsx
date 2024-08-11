@@ -1,52 +1,91 @@
-const FeatureItem = ({ icon, name }) => {
+import icons from '../../assets/icons.svg';
+import css from './FeatureItem.module.css';
+
+const FeatureItem = ({ feature }) => {
+  const { name, quantity, value } = feature;
+
+  let icon;
+  let title;
+
+  if (name === 'adults') {
+    icon = 'users';
+    title = 'adults';
+  }
+
+  if (name === 'engine') {
+    icon = 'petrol';
+    title = value;
+  }
+
+  if (name === 'transmission') {
+    icon = 'automatic';
+    title = value;
+  }
+
   if (name === 'airConditioner') {
-    icon === '${icons}#icon-airConditioner';
+    icon = 'airConditioner';
+    title = 'Air conditioner';
   }
 
   if (name === 'bathroom') {
-    icon === '${icons}#icon-shower';
+    icon = 'shower';
+    title = 'Bathroom';
+  }
+
+  if (name === 'beds') {
+    icon = 'beds';
+    title = 'beds';
   }
 
   if (name === 'kitchen') {
-    icon === '${icons}#icon-kitchen';
+    icon = 'kitchen';
+    title = 'kitchen';
   }
 
   if (name === 'TV') {
-    icon === '${icons}#icon-TV';
+    icon = 'TV';
+    title = 'TV';
   }
 
   if (name === 'CD') {
-    icon === '${icons}#icon-CD';
+    icon = 'CD';
+    title = 'CD';
   }
 
   if (name === 'radio') {
-    icon === '${icons}#icon-radio';
+    icon = 'radio';
+    title = 'Radio';
   }
 
   if (name === 'shower') {
-    icon === '${icons}#icon-shower';
+    icon = 'shower';
+    title = 'Shower';
   }
 
   if (name === 'toilet') {
-    icon === '${icons}#icon-toilet';
+    icon = 'toilet';
+    title = 'Toilet';
   }
 
   if (name === 'freezer') {
-    icon === '${icons}#icon-freezer';
+    icon = 'freezer';
+    title = 'Freezer';
   }
 
   if (name === 'hob') {
-    icon === '${icons}#icon-hob';
+    icon = 'hob';
+    title = 'hob';
   }
   if (name === 'microwave') {
-    icon === '${icons}#icon-microwave';
+    icon = 'microwave';
+    title = 'Microwave';
   }
   return (
     <>
-      <svg width={20} height={20}>
-        <use href={icon}></use>
+      <svg className={css.featureIcon} width={20} height={20}>
+        <use href={`${icons}#icon-${icon}`}></use>
       </svg>
-      <p>{name}</p>
+      <p>{`${quantity ? quantity + ' ' : ''}${title}`}</p>
     </>
   );
 };

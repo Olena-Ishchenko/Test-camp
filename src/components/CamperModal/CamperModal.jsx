@@ -1,9 +1,22 @@
 import ReactModal from 'react-modal';
 import icons from '../../assets/icons.svg';
 import css from './CamperModal.module.css';
+import Features from '../Features/Features';
+import VehicleDetails from '../VehicleDetails/VehicleDetails';
+import OrderForm from '../OrderForm/OrderForm';
+import Reviews from '../Reviews/Reviews';
+import { useState } from 'react';
 
-const CamperModal = ({ modalIsOpen = false, camper = {}, onChange }) => {
+const CamperModal = ({
+  modalIsOpen = false,
+  camper = {},
+  onChange,
+  camperItem,
+  details,
+  reviews,
+}) => {
   ReactModal.setAppElement(document.getElementById('root'));
+  const [selectedDetails, setSelectedDetails] = useState('');
   return (
     <ReactModal
       isOpen={modalIsOpen}
@@ -11,6 +24,7 @@ const CamperModal = ({ modalIsOpen = false, camper = {}, onChange }) => {
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
       preventScroll={true}
+      overlayClassName={css.overlay}
       className={css.modalContainer}
     >
       <div className={css.modalTitleContainer}>
@@ -64,7 +78,7 @@ const CamperModal = ({ modalIsOpen = false, camper = {}, onChange }) => {
           className={css.modalBtn}
           type="submit"
           onClick={() => {
-            console.log('features');
+            setSelectedDetails('features');
           }}
         >
           Features
@@ -73,11 +87,21 @@ const CamperModal = ({ modalIsOpen = false, camper = {}, onChange }) => {
           className={css.modalBtn}
           type="submit"
           onClick={() => {
-            console.log('reviews');
+            setSelectedDetails('reviews');
           }}
         >
           Reviews
         </button>
+      </div>
+      <div className={css.modalDetailsContainer}>
+        {selectedDetails === 'features' && (
+          <div>
+            <Features camperItem={camperItem} />
+            <VehicleDetails details={details} />
+          </div>
+        )}
+        {selectedDetails === 'reviews' && <Reviews reviews={reviews} />}
+        {selectedDetails && <OrderForm />}
       </div>
     </ReactModal>
   );

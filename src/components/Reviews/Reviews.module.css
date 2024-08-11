@@ -1,0 +1,43 @@
+.reviewerLetter {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #e44848;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background: #f2f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviewerContainer {
+  display: flex;
+  gap: 16px;
+  margin-top: 44px;
+}
+
+.reviewerName {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33333;
+  color: #101828;
+  margin-bottom: 4px;
+}
+
+.iconStar {
+  fill: #f2f4f7;
+}
+
+.reviewText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

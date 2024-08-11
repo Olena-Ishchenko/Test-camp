@@ -1,78 +1,110 @@
-import icons from '../../assets/icons.svg';
 import FeatureItem from '../FeatureItem/FeatureItem';
 import css from './Features.module.css';
 
+function array(camper) {
+  const rez = [];
 
+  if (camper.adults) {
+    rez.push({ name: 'adults', quantity: camper.adults });
+  }
 
-const Features = ({ data }) => {
+  if (camper.engine) {
+    rez.push({ name: 'engine', value: camper.engine });
+  }
+
+  if (camper.transmission) {
+    rez.push({ name: 'transmission', value: camper.transmission });
+  }
+
+  if (camper.details.airConditioner) {
+    rez.push({
+      name: 'airConditioner',
+      quantity: camper.details.airConditioner,
+    });
+  }
+
+  if (camper.details.bathroom) {
+    rez.push({
+      name: 'bathroom',
+    });
+  }
+
+  if (camper.details.kitchen) {
+    rez.push({
+      name: 'kitchen',
+    });
+  }
+
+  if (camper.details.beds) {
+    rez.push({
+      name: 'beds',
+      quantity: camper.details.beds,
+    });
+  }
+
+  if (camper.details.TV) {
+    rez.push({
+      name: 'TV',
+    });
+  }
+
+  if (camper.details.CD) {
+    rez.push({
+      name: 'CD',
+    });
+  }
+
+  if (camper.details.radio) {
+    rez.push({
+      name: 'radio',
+    });
+  }
+
+  if (camper.details.shower) {
+    rez.push({
+      name: 'shower',
+    });
+  }
+
+  if (camper.details.toilet) {
+    rez.push({
+      name: 'toilet',
+    });
+  }
+
+  if (camper.details.freezer) {
+    rez.push({
+      name: 'freezer',
+    });
+  }
+
+  if (camper.details.hob) {
+    rez.push({
+      name: 'hob',
+      quantity: camper.details.hob,
+    });
+  }
+
+  if (camper.details.microwave) {
+    rez.push({
+      name: 'microwave',
+    });
+  }
+
+  return rez;
+}
+
+const Features = ({ camperItem }) => {
+  const newArray = array(camperItem); // {name, quantity} camper[feature]
   return (
     <div>
-      <ul>
-        {data.map(camper => (
-          <li key={camper._id}>
-            <FeatureItem
-              icon={ }
-              name={camper.details}
-            />
+      <ul className={css.featuresList}>
+        {newArray.map(feature => (
+          <li className={css.featureItem} key={feature.name}>
+            <FeatureItem feature={feature} />
           </li>
         ))}
       </ul>
-      {/* <ul className={css.cardDetailsList}>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-users`}></use>
-          </svg>
-          <p>{camper.adults} adults</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-automatic`}></use>
-          </svg>
-          <p>Automatic</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-AC`}></use>
-          </svg>
-          <p>AC</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-petrol`}></use>
-          </svg>
-          <p>Petrol</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-kitchen`}></use>
-          </svg>
-          <p>Kitchen</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-beds`}></use>
-          </svg>
-          <p>{camper.details.beds} beds</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-airConditioner`}></use>
-          </svg>
-          <p>{camper.details.airConditioner} air conditioner</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-CD`}></use>
-          </svg>
-          <p>CD</p>
-        </li>
-        <li className={css.cardDetailsItem}>
-          <svg width={20} height={20}>
-            <use href={`${icons}#icon-radio`}></use>
-          </svg>
-          <p>Radio</p>
-        </li>
-      </ul> */}
     </div>
   );
 };
